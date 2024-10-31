@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+
 /**
  *
  * @author Dennis
@@ -15,7 +18,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
-//        setExtendedState(Menu.MAXIMIZED_BOTH);
+        setExtendedState(Menu.MAXIMIZED_BOTH);
     }
 
     /**
@@ -32,7 +35,7 @@ public class Menu extends javax.swing.JFrame {
         MnProductos = new javax.swing.JMenuItem();
         MnCategoria = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        MnCliente = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         MnProveedor = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -71,13 +74,13 @@ public class Menu extends javax.swing.JFrame {
 
         jMenu2.setText("GESTION DE CLIENTES");
 
-        jMenuItem1.setText("CLIENTE");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        MnCliente.setText("CLIENTE");
+        MnCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                MnClienteActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem1);
+        jMenu2.add(MnCliente);
 
         jMenuBar1.add(jMenu2);
 
@@ -134,27 +137,37 @@ public class Menu extends javax.swing.JFrame {
 
     private void MnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnProductosActionPerformed
         // TODO add your handling code here:
-          PRODUCTO nuevoFormulario = new PRODUCTO();
-                nuevoFormulario.setVisible(true);
-                
+         PRODUCTO proForm = new PRODUCTO();
+        proForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+        proForm.setAlwaysOnTop(true);  
+         proForm.setVisible(true);  
     }//GEN-LAST:event_MnProductosActionPerformed
 
     private void MnCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnCategoriaActionPerformed
         // TODO add your handling code here:
-         CATEGORIA nuevoFormulario = new CATEGORIA();
-                nuevoFormulario.setVisible(true);
+   
+
+        CATEGORIA catesForm = new CATEGORIA();
+        catesForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+        catesForm.setAlwaysOnTop(true);  
+         catesForm.setVisible(true);  
+
     }//GEN-LAST:event_MnCategoriaActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void MnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnClienteActionPerformed
         // TODO add your handling code here:
-        CLIENTES nuevoFormulario = new CLIENTES();
-                nuevoFormulario.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+        CLIENTES cliForm = new CLIENTES();
+        cliForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+        cliForm.setAlwaysOnTop(true);  
+         cliForm.setVisible(true);  
+    }//GEN-LAST:event_MnClienteActionPerformed
 
     private void MnProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnProveedorActionPerformed
         // TODO add your handling code here:
-        PROVEEDOR nuevoFormulario = new PROVEEDOR();
-                nuevoFormulario.setVisible(true);
+          PROVEEDOR proForm = new PROVEEDOR();
+        proForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  
+        proForm.setAlwaysOnTop(true);  
+         proForm.setVisible(true);  
     }//GEN-LAST:event_MnProveedorActionPerformed
 
     /**
@@ -194,6 +207,7 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem MnCategoria;
+    private javax.swing.JMenuItem MnCliente;
     private javax.swing.JMenuItem MnProductos;
     private javax.swing.JMenuItem MnProveedor;
     private javax.swing.JMenu jMenu1;
@@ -203,7 +217,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
